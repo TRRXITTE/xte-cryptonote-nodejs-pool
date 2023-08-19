@@ -30,6 +30,7 @@ npm install forever -g
 ```
 git clone https://github.com/TRRXITTE/XTEnetwork-ha
 cd XTEnetwork-ha
+sudo apt-get install build-essential
 npm install
 
 wget https://github.com/TRRXITTE/XTEnetwork-ha/releases/download/0.10.0-XTEnetwork/XTEnetwork-0.10.0_ubuntu-20.04 XTEnetwork
@@ -51,7 +52,7 @@ name: pool
 password: [YOUR PASSWORD]  
 download XTEservice for Ubuntu  
 ```
-wgethttps://github.com/TRRXITTE/XTEnetwork-ha/releases/download/0.10.0-XTEnetwork/XTEservice-0.10.0_ubuntu-20.04 XTEservice  
+wget https://github.com/TRRXITTE/XTEnetwork-ha/releases/download/0.10.0-XTEnetwork/XTEservice-0.10.0_ubuntu-20.04 XTEservice  
 chmod +x XTEservice  
 screen -S service  
 ./XTEservice --container-file /home/traaitt/pool.wallet --container-password YOURPASSWORD --enable-cors  * --rpc-legacy-security --bind-port 8440
@@ -59,6 +60,8 @@ screen -S service
 control A + D to detach
 // to reattach screen session -> screen ls -> screen -r sessionid.service
 
+* Boost is required for the cryptoforknote-util module
+  * For Ubuntu: `sudo apt-get install libboost-all-dev`
 ```
 cd xte-cryptonote-nodejs-pool
 nvm use 11
