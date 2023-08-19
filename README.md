@@ -40,12 +40,20 @@ forever start service.js // node service.js
 
 ## /- wallet service for payment processing
 
-CREATE wallet with traaittwallet ++
-name: pool
-password: [YOUR PASSWORD]
-download XTEservice for Ubuntu
+CREATE wallet with traaittwallet ++  
 ```
-screen -S service
+wget https://github.com/TRRXITTE/XTEnetwork-ha/releases/download/0.10.0-XTEnetwork/traaittwallet++-0.10.0_ubuntu-20.04 traaittwallet++
+
+chmod +x traaittwallet++
+```
+-> create wallet  
+name: pool  
+password: [YOUR PASSWORD]  
+download XTEservice for Ubuntu  
+```
+wgethttps://github.com/TRRXITTE/XTEnetwork-ha/releases/download/0.10.0-XTEnetwork/XTEservice-0.10.0_ubuntu-20.04 XTEservice  
+chmod +x XTEservice  
+screen -S service  
 ./XTEservice --container-file /home/traaitt/pool.wallet --container-password YOURPASSWORD --enable-cors  * --rpc-legacy-security --bind-port 8440
 ```
 control A + D to detach
