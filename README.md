@@ -65,9 +65,9 @@ nvm use 11
 npm install
 ```
 / edit config.json parameters for [XTE]
-
+```
 forever start init.js // node init.js
-
+```
 
 
 #### Table of Contents
