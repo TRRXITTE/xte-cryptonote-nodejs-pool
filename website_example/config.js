@@ -1,5 +1,5 @@
 var api = "https://xte.trrxitte.com/api";
-
+let parentCoin = "traaitt";
 var email = "mine@trrxitte.com";
 var telegram = "https://t.me/mineTRRXITTE";
 var discord = "https://discordapp.com/invite/YourPool";
