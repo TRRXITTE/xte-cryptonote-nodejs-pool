@@ -1,30 +1,6 @@
 <h3>Frequently Asked Questions (FAQ)</h3>
 
 <h4 class="push-up-20" data-tkey="faq1_title">How do I pick which coins to merge mine?</h4>
-<div class="card padding-15 push-down-10" data-tkey="faq1_text"><p>The hash work of your miner application to the parent coin is also applied to the child coin you specify in the mining software pool password field.</p>
-
-<p>You must mine at one parent coin, which in this case is ARQ for ArQmA.
-Specify your ArQmA wallet address and static difficulty per the Getting Started page.
-Using the pool password field in your miner to specify one of the child coin wallet addresses. See which child coins are listed on the pool's Dashboard page.
-You will need at least a wallet address from an exchange or a wallet/paper wallet application to get an coin address for the parent coin and each child coin you wish to merge mine.</p>
-
-<p>You can also connect multiple rigs with the same wallet address for the parent coin, and different child coin wallet address to apply hash to that child coin also.</p>
-
-<p>Specify your rig_id in your miner software.</p>
-<p>Put your child coin wallet address in the pool password field and put "@rig_id" at the end.
- It can be a direct to exchange address also.</p>
-<p>For example in XMR-STAK,  the pools.txt config file  looks something like this:
-"rig_id" : "Johnny5",
-An example  wallet for Turtle child coin is "TRTL2aedfsr23blahlongaddressfield+paymentIDsomething"  
-so make it formatted for the pool password as
-"pool_password" : "TRTL2aedfsr23blahlongaddressfield+paymentIDsomething@Johnny5"</p>
-
-<p>You can also use the configuration generator within the <a href="#getting_started">Getting Started</a> section of the pool.</p>
-<p>Also, you can segment your cpu mining on one mining application to be applied to
-the parent coin and specify your hash work one of the several child coins. 
-There is no limit on how many workers you can specify. You can also customize your miner application to mine only with certain gpus to a particular parent/child combination.  Probably you can run several mining applications in tandem as long as they use only resources you specify.</p>
-
-</div>
 
 <h4 class="push-up-20" data-tkey="faq1_title">Where are the stats for the pool?  Why hasn't anything changed?</h4>
 <div class="card padding-15 push-down-10" data-tkey="faq1_text">The dashboard lists the coins being mined, reward for each block, current effort on each block for the merged mining.   Sometimes the Pool Blocks section and Worker Statistics needs a refresh by your browser to get updated stats. Typically that is pressing CTRL+F5 to flush the cache and ask your brower for fresh data.</div>
@@ -45,11 +21,10 @@ If your shares are accepted faster, but with lower difficulty each share is wort
 <div class="card padding-15 push-down-10" data-tkey="faq4_text">Transaction data is recorded in blocks. New transactions are being processes by miners into new blocks which are added to the end of the blockchain.</div>
 
 <h4 data-tkey="faq5_title">How long does it take to find a block?</h4>
-<div class="card padding-15 push-down-10" data-tkey="faq5_text">It depends on amount of active miners. The more miners work on pool â†’ the more hashrate pool has â†’ the more blocks are found by the pool. However the more miners are active â†’ the less reward you get from each block found.
-Probablistically, even smaller pools will less miners or hash rate will eventually get a block.
-Decentralizing the hash proof of work across several pools on any network is important for security of the coin network, for both the parent coin and the child coins.
-The block time is how long it can take on average amount effort . The average for ArQmA is 120 seconds. However, some of the child coins have block timeframes on the average of 15 to 30 seconds. Check your child coins network specification. Some blocks are solved faster than the average block time, some blocks can have a higher than average block effort time. 
-Also some other pools might solve the block first, and there is a slim possibility of an orphan block on a child coin being mined.</div>
+<div class="card padding-15 push-down-10" data-tkey="faq5_text">It depends on amount of active miners. The more miners work on pool the more hashrate pool has the more blocks are found by the pool. However the more miners are active the less reward you get from each block found.
+Decentralizing the hash proof of work across several pools on any network is important for security of the coin network.
+The block time is how long it can take on average amount effort . The average for XTE is 24 seconds. Some blocks are solved faster than the average block time, some blocks can have a higher than average block effort time. 
+Also some other pools might solve the block first, and there is a slim possibility of an orphan block.</div>
 
 <h4 data-tkey="faq6_title">What is an orphan block?</h4>
 <div class="card padding-15 push-down-10" data-tkey="faq6_text">An orphan is a block that didn't meet the requirement as a solution to the block found. Also, there can be a situation where another pool or solo miner found the block solution first, and narrowly won the race. Blocks are confirmed by hash verfication by all the nodes on the coin's network. If there is a consensus of which node(pool,solo) found it first, then that block is added to the block chain permanenty with credit applying to that pool/solo/node.
@@ -64,7 +39,7 @@ A few orphan blocks on child coins can happen when the parent coin's hash work d
 </div>
 
 <h4 data-tkey="faq8_title">I have been mining on this pool for 1 hour but still have not received any payouts. WTF?</h4>
-<div class="card padding-15 push-down-10" data-tkey="faq8_text"><p>As soon as the block is found you will get your reward. Please wait a little bit more time. In the case of ArQmA, a block has at least 18 confirmations before the pool starts its payout cycle.  Typically every 36 minutes for a completed block plus the time interval set by the pool operator on the pool's Dashboard screeen.  Payments can be halted for various reasons within the automated pool software, but highly unlikely. There is usually a minimum payout for each parent coin and child coins. Payments for matured blocks that meet the minimum can also be triggered manually by a pool operator/administrator. Ask nicely in Telegram or Discord support. Please have your information all in order before you ask such as miner application, version number, gpu and cpu information, wallet addresses, and error messages reported.
+<div class="card padding-15 push-down-10" data-tkey="faq8_text"><p>As soon as the block is found you will get your reward. Please wait a little bit more time. In the case of XTE, a block has at least 100 confirmations before the pool starts its payout cycle.  Typically every 40 minutes for a completed block plus the time interval set by the pool operator on the pool's Dashboard screeen.  Payments can be halted for various reasons within the automated pool software, but highly unlikely. There is usually a minimum payout for each parent coin and child coins. Payments for matured blocks that meet the minimum can also be triggered manually by a pool operator/administrator. Ask nicely in Telegram or Discord support. Please have your information all in order before you ask such as miner application, version number, gpu and cpu information, wallet addresses, and error messages reported.
 </p><p>The merge mined child coins have a different number of confirmation blocks needed, but at least the pool checks for fully verified blocks set at the interval on the Dashboard page. Not every parent block found generates a child block.
 Check the Pool Blocks page on the pool. Or configure your settings to get an email alert if you like on the Settings pool page.
 </p></div>
@@ -79,13 +54,6 @@ However, if the coin network has a high hash in total (see Dashboard), the diffi
 </p>
 <p>In the case of solo merged mining specified in the pool password field, you are also competing against the main pool users on proportional shares, and the entire child coin network and the other pools on the parent network that are also merge mining.  However the reward is much higher since you might get two coin blocks(or more)  for the same effort.
 </p>
-</div>
-
-<h4 data-tkey="faq9_title">I've been banned by the pool itself. What do I do now?</h4>
-<div class="card padding-15 push-down-10" data-tkey="faq9_text"><p>Disconnect your miner for five minutes at least. Then try again. Please pay close attention to error messages reported by the pool software to your miner client software. Typical errors are invalid parent wallet address format, or bad child coin wallet address specified in the pool password field.  Check your miner logs if you have them turned on.
-</p>
-<p>Did you forget to turn off nicehash option?</p>
-<p>For persistent banning, check with the pool operator or Admininstrator to see if there is something else going wrong outside of  your control. Links for Telegram and Discord support are on the left side of the pool web page front end.</p>
 </div>
 
 
