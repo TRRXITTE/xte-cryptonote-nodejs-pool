@@ -274,18 +274,14 @@ $(function(){
     }
 
     // Add support informations to menu
-    if (typeof trrxitte !== 'undefined' && trrxitte) {
-        $('#menu-content').append('<li><a target="_new" href="'+trrxitte+'"><i class="fa fa-envelope"></i> <span data-tkey="contactUs">TRRXITTE Int.</span></a></li>');
-    }
     if (typeof telegram !== 'undefined' && telegram) {
-        $('#menu-content').append('<li><a target="_new" href="'+telegram+'"><i class="fa fa-telegram"></i> <span data-tkey="telegram">Telegram mineTRRXITTE</span></a></li>');
+        $('#menu-content').append('<li><a target="_new" href="'+telegram+'"><i class="fa fa-telegram"></i> <span data-tkey="telegram">Telegram group</span></a></li>');
     }
-    if (typeof telegram1 !== 'undefined' && telegram1) {
-        $('#menu-content').append('<li><a target="_new" href="'+telegram1+'"><i class="fa fa-telegram"></i> <span data-tkey="telegram">Telegram XTE</span></a></li>');
-    }
-
     if (typeof facebook !== 'undefined' && facebook) {
         $('#menu-content').append('<li><a target="_new" href="'+facebook+'"><i class="fa fa-facebook"></i> <span data-tkey="facebook">Facebook</span></a></li>');
+    }
+    if (typeof email !== 'undefined' && email) {
+        $('#menu-content').append('<li><a target="_new" href="'+email+'"><i class="fa fa-envelope"></i> <span data-tkey="contactUs">Contact Us</span></a></li>');
     }
     if (typeof langs !== 'undefined' && langs) {
         $('#menu-content').append('<div id="mLangSelector"></div>');
