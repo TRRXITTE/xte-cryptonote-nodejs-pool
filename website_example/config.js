@@ -1,9 +1,9 @@
 var api = "https://xte.trrxitte.com/api";
 let parentCoin = "traaitt";
-var email = "mine@trrxitte.com";
+var trrxitte = "https://trrxitte.com";
 var telegram = "https://t.me/mineTRRXITTE";
-var discord = "https://discordapp.com/invite/YourPool";
-var facebook = "https://www.facebook.com/<YourPoolFacebook>";
+var telegram1 = "https://t.me/traaitt";
+var facebook = "https://www.facebook.com/TRRXITTE";
 
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-LTC", "{symbol}-DOGE", "{symbol}-USDT", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
