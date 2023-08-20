@@ -5,7 +5,7 @@
         <div class="card padding-l-10 padding-r-10">
             <div class="stats">
                 <div><i class="fa fa-cloud"></i> <span data-tkey="miningPoolHost">Mining Pool Address</span>: <span id="miningPoolHost"></span></div>
-                <div><i class="fa fa-cubes"></i> <span data-tkey="cnAlgorithm">Algorithm</span>: <span id="cnAlgorithm"></span></div>
+                <div><i class="fa fa-cubes"></i> <span data-tkey="cnAlgorithm">Algorithm</span>: <strong>Argon2id/Chukwa</strong></div>
             </div>
         </div>
 
@@ -138,11 +138,11 @@
             <td>NVIDIA GPU & CPU</td>
             <td>CUDA 12.0 software</td>
             <td><a class="btn btn-success" target="_blank" href="https://github.com/trrxitte/miner/releases/latest"><span data-tkey="download">Download</span></a></td>
-            <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
+            <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#trrxitteminer" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
         </tr>
         <tr class="appConfig">
             <td colspan="5">
-                <div class="collapse" id="xmrig">
+                <div class="collapse" id="trrxitteminer">
     
 <pre><code>{
         "hardwareConfiguration": {
@@ -189,15 +189,14 @@
                 <td>CPU only</td>
                 <td>Easy to use CPU App</td>
                 <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig/releases/tag/v3.1.0"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrstak" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
-                    <div class="collapse" id="xmrstak">
+                    <div class="collapse" id="xmrig">
 		
 <pre><code>xmrig.exe -t 4 -o <span class="exampleHost">POOL_HOST</span> -u <span class="exampleLogin">YOUR_WALLET_ADDRESS</span> -p <span class="examplePassword">YOUR_WORKER_NAME</span> -k -a argon2/chukwa</pre>
-
-                    </div>
+</div>
                 </td>
             </tr>
 	    
@@ -207,11 +206,11 @@
                 <td>AMD GPU & CPU</td>
                 <td>High performance miner</td>
                 <td><a class="btn btn-success" target="_blank" href="https://www.srbminer.com/"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#srbminer" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
-                    <div class="collapse" id="xmrig">
+                    <div class="collapse" id="srbminer">
 		
 <pre><code>SRBMiner-Multi.exe --disable-cpu --algorithm cukwa --pool <span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> --wallet <span class="exampleLogin">YOUR_WALLET_ADDRESS</span>
 </code></pre>
