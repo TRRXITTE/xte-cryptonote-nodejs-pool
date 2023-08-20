@@ -36,7 +36,7 @@
         "ports": [
             {
                 "port": 3333,
-                "difficulty": 100000,
+                "difficulty": 1000,
                 "desc": "Low end hardware"
             },
             {
@@ -68,7 +68,7 @@
             }
         ],
         "varDiff": {
-            "minDiff": 100000,
+            "minDiff": 10000,
             "maxDiff": 1000000000,
             "targetTime": 32,
             "retargetTime": 32,

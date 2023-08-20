@@ -136,7 +136,7 @@
         <tr class="appInfo">
             <td class="miningAppTitle">TRRXITTEminer</td>
             <td>NVIDIA GPU & CPU</td>
-            <td>easy to use Mining Software</td>
+            <td>CUDA 12.0 software</td>
             <td><a class="btn btn-success" target="_blank" href="https://github.com/trrxitte/miner/releases/latest"><span data-tkey="download">Download</span></a></td>
             <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
         </tr>
@@ -147,7 +147,7 @@
 <pre><code>{
         "hardwareConfiguration": {
             "cpu": {
-                "enabled": true,
+                "enabled": false,
                 "optimizationMethod": "Auto",
                 "threadCount": 12
             },
@@ -183,31 +183,19 @@
                 </div>
             </td>
         </tr>
-	    <!-- XMR Stak -->
+	    <!-- XMRig -->
             <tr class="appInfo">
-                <td class="miningAppTitle">XMR Stak</td>
-                <td>CPU & GPU (AMD/NVIDIA)</td>
-                <td>Easy to use CPU + GPU Mining App</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/fireice-uk/xmr-stak/releases/tag/2.10.8"><span data-tkey="download">Download</span></a></td>
+                <td class="miningAppTitle">XMRig</td>
+                <td>CPU only</td>
+                <td>Easy to use CPU App</td>
+                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig/releases/tag/v3.1.0"><span data-tkey="download">Download</span></a></td>
                 <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrstak" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
                     <div class="collapse" id="xmrstak">
 		
-<pre><code>"pool_list": [
-    {
-        "pool_address": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "wallet_address": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "rig_id": "",
-        "pool_password": /* Solo Mining set [solo:] */"<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "use_nicehash": false,
-        "use_tls": false, /* Set to true if you are using an SSL port */
-        "tls_fingerprint": "",
-        "pool_weight": 1
-    },
-],
-"currency": "<span id="xmrstakAlgo"></span>",</code></pre>
+<pre><code>xmrig.exe -t 4 -o <span class="exampleHost">POOL_HOST</span> -u <span class="exampleLogin">YOUR_WALLET_ADDRESS</span> -p <span class="examplePassword">YOUR_WORKER_NAME</span> -k -a argon2/chukwa</pre>
 
                     </div>
                 </td>
@@ -215,128 +203,17 @@
 	    
 	    <!-- XMRig -->
             <tr class="appInfo">
-                <td class="miningAppTitle">XMRig</td>
-                <td>CPU</td>
-                <td>Ligthweight but powerful CPU Mining App</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig/releases/latest"><span data-tkey="download">Download</span></a></td>
+                <td class="miningAppTitle">SRBMiner MULTI</td>
+                <td>AMD GPU & CPU</td>
+                <td>High performance miner</td>
+                <td><a class="btn btn-success" target="_blank" href="https://www.srbminer.com/"><span data-tkey="download">Download</span></a></td>
                 <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
             </tr>
             <tr class="appConfig">
                 <td colspan="5">
                     <div class="collapse" id="xmrig">
 		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "keepalive": true,
-        "nicehash": false,
-        "variant": "trtl",
-        "algo": "cryptonight-pico/trtl"
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
-	    <!-- XMRig-AMD -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRig-AMD</td>
-                <td>OpenCL (AMD)</td>
-                <td>XMRIG version for AMD GPU</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-amd/releases/latest"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-amd" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig-amd">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
-        "keepalive": true,
-        "nicehash": false,
-        "variant": "trtl",
-        "algo": "cryptonight-pico/trtl"
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
-	    <!-- XMRig-NVIDIA -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRig-NVIDIA</td>
-                <td>Cuda (Nvidia)</td>
-                <td>XMRIG version for Nvidia GPU</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/xmrig/xmrig-nvidia/releases/latest"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-nvidia" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig-nvidia">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>"
-        "keepalive": true,
-        "nicehash": false
-        "variant": "trtl",
-        "algo": "cryptonight-pico/trtl"
-    }
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
-	    <!-- XMRigCC -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">XMRigCC</td>
-                <td>CPU</td>
-                <td>XMRIG Fork, optimized with remote control</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/Bendr0id/xmrigCC/releases/latest"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig-cc" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="xmrig-cc">
-		
-<pre><code>"pools": [
-    {
-        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-        "keepalive": true,
-        "nicehash": false,
-        "algo": "cryptonight-ultralite",
-        "pow-variant": "2"
-    },
-],</code></pre>
-
-                    </div>
-                </td>
-            </tr>
-
-                    <!-- Team Red Miner -->
-            <tr class="appInfo">
-                <td class="miningAppTitle">Team Red Miner</td>
-                <td>GPU</td>
-                <td>AMD GPU Optimized Cryptocurrency Miner</td>
-                <td><a class="btn btn-success" target="_blank" href="https://github.com/todxx/teamredminer/releases/latest"><span data-tkey="download">Download</span></a></td>
-                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#teamRedMiner" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
-            </tr>
-            <tr class="appConfig">
-                <td colspan="5">
-                    <div class="collapse" id="teamRedMiner">
-<pre><code>teamredminer.ext -a cnv8 trtle -o stratum+tcp//<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> -u "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>" -p "<span class="examplePassword">YOUR_WORKER_NAME</span>" 
+<pre><code>SRBMiner-Multi.exe --disable-cpu --algorithm cukwa --pool <span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> --wallet <span class="exampleLogin">YOUR_WALLET_ADDRESS</span>
 </code></pre>
 
                     </div>
