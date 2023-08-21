@@ -200,7 +200,7 @@
                 </td>
             </tr>
 	    
-	    <!-- XMRig -->
+	    <!-- SRBMINER MULTI -->
             <tr class="appInfo">
                 <td class="miningAppTitle">SRBMiner MULTI</td>
                 <td>AMD GPU & CPU</td>
@@ -213,6 +213,29 @@
                     <div class="collapse" id="srbminer">
 		
 <pre><code>SRBMiner-Multi.exe --disable-cpu --algorithm cukwa --pool <span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> --wallet <span class="exampleLogin">YOUR_WALLET_ADDRESS</span>
+</code></pre>
+
+                    </div>
+                </td>
+            </tr>
+
+            <!-- crypto dredge -->
+            <tr class="appInfo">
+                <td class="miningAppTitle">crypto dredge</td>
+                <td>NVIDIA GPU & CPU</td>
+                <td>stable old nvidia miner</td>
+                <td><a class="btn btn-success" target="_blank" href="https://github.com/CryptoDredge/miner/releases/tag/v0.27.0"><span data-tkey="download">Download</span></a></td>
+                <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#cryptodredge" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
+            </tr>
+            <tr class="appConfig">
+                <td colspan="5">
+                    <div class="collapse" id="cryptodredge">
+		
+<pre><code>
+    @echo off
+title XTE.TRRXITTE.com
+CryptoDredge -a chukwa -o stratum+tcp://<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span> -u <span class="exampleLogin">YOUR_WALLET_ADDRESS</span> -p <span class="examplePassword">YOUR_WORKER_NAME</span>
+pause
 </code></pre>
 
                     </div>
