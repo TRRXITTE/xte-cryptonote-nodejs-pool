@@ -2,7 +2,7 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 @import url(//fonts.googleapis.com/css?family=Inconsolata:400,700);
 
-edit sidebar and topbar color code to #191919 and background to #FFF0F5
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://traaitt.com/images/cursor.cur), auto !important;} /* End https://www.cursors-4u.com */
 body {  
   background-color: #FFF0F5;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
