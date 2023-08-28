@@ -5,7 +5,7 @@
     "symbol": "XTE",
     "coinUnits": 100,
     "coinDecimalPlaces": 2,
-    "coinDifficultyTarget": 24,
+    "coinDifficultyTarget": 45,
     "daemonType": "bytecoin",
     "cnAlgorithm": "chukwa",
     "cnVariant": 2,
@@ -36,7 +36,7 @@
         "ports": [
             {
                 "port": 3333,
-                "difficulty": 1000,
+                "difficulty": 100000,
                 "desc": "Low end hardware"
             },
             {
@@ -88,7 +88,7 @@
             "min": 10,
             "stepDown": 3,
             "threshold": 10,
-            "penalty": 30
+            "penalty": 15
         },
         "banning": {
             "enabled": false,
@@ -114,7 +114,7 @@
         "dynamicTransferFee": true,
         "minerPayFee" : true,
         "minPayment": 100000,
-        "maxTransactionAmount": 100000000000,
+        "maxTransactionAmount": 10000000000,
         "denomination": 100
     },
 
